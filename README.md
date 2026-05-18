@@ -1,16 +1,33 @@
-# React + Vite
+=======
+# Guntupalli Naga Lakshmi — Frontend Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern and responsive frontend developer portfolio built using React.js, TypeScript, Tailwind CSS, and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React.js
+- TypeScript
+- Tailwind CSS
+- Vite
+- REST APIs
+- Responsive Design
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Modern UI/UX
+- Fully Responsive Design
+- Smooth Animations
+- Enterprise-style Layout
+- Optimized Performance
+- Resume Download Support
 
-## Expanding the ESLint configuration
+## 📌 About The Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This portfolio showcases my frontend development skills, projects, technical stack, and professional experience.  
+Focused on building scalable, reusable, and responsive web applications with clean UI architecture.
+
+## 📫 Contact
+
+- LinkedIn: www.linkedin.com/in/nagalakshmi-frontend
+- Location: Hyderabad, India
+>>>>>>> 07dac5d059ab2c568f87d6bd2fce0cde5bfe7009
