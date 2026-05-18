@@ -1,0 +1,240 @@
+.footer {
+  background: var(--bg-primary);
+  padding: 60px 0 40px;
+  width: 100%;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent) 50%, transparent);
+  opacity: 0.5;
+}
+
+/* Removed ::after pseudo-element that was extending above footer causing white glow */
+
+.footer-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-name-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0;
+  letter-spacing: -0.02em;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-name::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.3), transparent 70%);
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.footer-name:hover {
+  color: var(--accent-hover);
+  transform: translateY(-3px) scale(1.05);
+  text-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.footer-name:hover::after {
+  opacity: 1;
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.footer-title {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icon {
+  font-size: 1.375rem;
+  color: var(--text-secondary);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 12px;
+  background: var(--bg-card);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.08));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.footer-icon::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.4), transparent 70%);
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.footer-icon:hover::before {
+  opacity: 1;
+}
+
+.footer-icon:hover::after {
+  opacity: 1;
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.footer-icon:hover {
+  color: var(--accent);
+  transform: translateY(-8px) scale(1.15) rotate(10deg);
+  border-color: var(--accent);
+  box-shadow: 
+    0 10px 32px rgba(99, 102, 241, 0.35), 
+    0 6px 16px rgba(15, 23, 42, 0.2);
+}
+
+.footer-copyright {
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+  max-width: 600px;
+}
+
+.footer-copyright p {
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  margin: 0;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 45px 0;
+  }
+  
+  .footer-content {
+    padding: 0 30px;
+    gap: 25px;
+  }
+  
+  .footer-name {
+    font-size: 1.375rem;
+  }
+  
+  .footer-icon {
+    font-size: 1.375rem;
+    padding: 11px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+  
+  .footer-content {
+    padding: 0 20px;
+    gap: 25px;
+  }
+  
+  .footer-name {
+    font-size: 1.25rem;
+  }
+  
+  .footer-title {
+    font-size: 0.875rem;
+  }
+  
+  .footer-social {
+    gap: 15px;
+  }
+  
+  .footer-icon {
+    font-size: 1.25rem;
+    padding: 10px;
+  }
+  
+  .footer-copyright p {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 35px 0;
+  }
+  
+  .footer-content {
+    padding: 0 15px;
+    gap: 20px;
+  }
+  
+  .footer-name {
+    font-size: 1.125rem;
+  }
+  
+  .footer-title {
+    font-size: 0.8125rem;
+  }
+  
+  .footer-social {
+    gap: 12px;
+  }
+  
+  .footer-icon {
+    font-size: 1.125rem;
+    padding: 9px;
+  }
+  
+  .footer-copyright p {
+    font-size: 0.8rem;
+  }
+}
